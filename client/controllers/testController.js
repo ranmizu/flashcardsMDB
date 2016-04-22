@@ -24,13 +24,13 @@ function TestController($scope, DeckFactory, UserFactory) {
   }
 
   //  Retrieve array of cards and deck name from factory and display first question
-  // $scope.getCards = function() {
-  //   $scope.cards = DeckFactory.loadDeck();
-  //   $scope.deckName = DeckFactory.getDeckname();
-  //   $scope.numCards = $scope.cards.length;
-  //   // $scope.showText = $scope.cards[$scope.index].question;
-  //   $scope.showCard();
-  // }
+  $scope.getCards = function() {
+    $scope.cards = DeckFactory.loadDeck();
+    $scope.deckName = DeckFactory.getDeckname();
+    $scope.numCards = $scope.cards.length;
+    $scope.showText = $scope.cards[$scope.index].question;
+    $scope.showCard();
+  }
 
   //  Display the appropriate question or answer
   //  'cardSide' is the text at the top of the card
@@ -83,5 +83,5 @@ function TestController($scope, DeckFactory, UserFactory) {
   }
 
   //  Initialize the create page by calling the getCards function
-  // $scope.getCards();
+   $scope.getCards();
 }

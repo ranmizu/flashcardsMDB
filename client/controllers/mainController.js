@@ -34,7 +34,7 @@ function MainController($scope, $state, DeckFactory, UserFactory) {
 
 
   $scope.createDeck = function() {
-    // DeckFactory.setDeck(deckId);
+    DeckFactory.setDeck(deckId);
     $scope.currentView = '';
     UserFactory.broadcast('createDeck');
   }
